@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>李荣跃的博客  | 如何用hugo搭建个人博客</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.62.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.3f5912c237ddd38c8e76debe081c7ca7.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="如何用hugo搭建个人博客" />
+<meta property="og:description" content="今天用hugo搭建了自己的博客，给大家分享一下过程。 主要有以下4个部分   hugo安装
+下载hugo_xxx-Windows-64bit.zip,下载网址为：hugo下载地址; 我把hugo.exe解压到了D:\Software\hugo\hugo.exe,并把D:\Software\hugo加到了环境变量PATH里,打开VScode,终端运行hugo version查看版本,有版本号则安装成功;
+  vscode终端运行命令行
+ cd /d/jirengu hugo new site wbnm-lirongyue.github.io-creator (wbnm-lirongyue为我的github用户名) cd wbnm-lirongyue.github.io-creator git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke (设置主题，我用的默认主题ananke) echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml hugo new posts/如何用hugo搭建个人博客.md(文字部分为我的博客标题名) 右边资源管理器content目录中会出现：如何用hugo搭建个人博客.md文件，更改标题，在下面写下你的内容，把draft状态改为false hugo server 右侧资源管理器更改config.toml文件：语言改为zh-Hans，baseURL改为https://wbnm-lirongyue.github.io hugo(重开一个控制台)，此时资源管理器会增加一个public文件夹 cd public 新建.gitignore文件夹，将/public/放进去 git init git add . gc    github远程仓库设置
+ 新建仓库，仓库名必须为：wbnm-lirongyue.github.io git remote add origin git@github.com.wbnm-lirongyue.github.io.git git push -u origin master    运行网址" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wbnm-lirongyue.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
+<meta property="article:published_time" content="2020-01-15T20:44:38+08:00" />
+<meta property="article:modified_time" content="2020-01-15T20:44:38+08:00" />
+<meta itemprop="name" content="如何用hugo搭建个人博客">
+<meta itemprop="description" content="今天用hugo搭建了自己的博客，给大家分享一下过程。 主要有以下4个部分   hugo安装
+下载hugo_xxx-Windows-64bit.zip,下载网址为：hugo下载地址; 我把hugo.exe解压到了D:\Software\hugo\hugo.exe,并把D:\Software\hugo加到了环境变量PATH里,打开VScode,终端运行hugo version查看版本,有版本号则安装成功;
+  vscode终端运行命令行
+ cd /d/jirengu hugo new site wbnm-lirongyue.github.io-creator (wbnm-lirongyue为我的github用户名) cd wbnm-lirongyue.github.io-creator git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke (设置主题，我用的默认主题ananke) echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml hugo new posts/如何用hugo搭建个人博客.md(文字部分为我的博客标题名) 右边资源管理器content目录中会出现：如何用hugo搭建个人博客.md文件，更改标题，在下面写下你的内容，把draft状态改为false hugo server 右侧资源管理器更改config.toml文件：语言改为zh-Hans，baseURL改为https://wbnm-lirongyue.github.io hugo(重开一个控制台)，此时资源管理器会增加一个public文件夹 cd public 新建.gitignore文件夹，将/public/放进去 git init git add . gc    github远程仓库设置
+ 新建仓库，仓库名必须为：wbnm-lirongyue.github.io git remote add origin git@github.com.wbnm-lirongyue.github.io.git git push -u origin master    运行网址">
+<meta itemprop="datePublished" content="2020-01-15T20:44:38&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-15T20:44:38&#43;08:00" />
+<meta itemprop="wordCount" content="62">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何用hugo搭建个人博客"/>
+<meta name="twitter:description" content="今天用hugo搭建了自己的博客，给大家分享一下过程。 主要有以下4个部分   hugo安装
+下载hugo_xxx-Windows-64bit.zip,下载网址为：hugo下载地址; 我把hugo.exe解压到了D:\Software\hugo\hugo.exe,并把D:\Software\hugo加到了环境变量PATH里,打开VScode,终端运行hugo version查看版本,有版本号则安装成功;
+  vscode终端运行命令行
+ cd /d/jirengu hugo new site wbnm-lirongyue.github.io-creator (wbnm-lirongyue为我的github用户名) cd wbnm-lirongyue.github.io-creator git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke (设置主题，我用的默认主题ananke) echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml hugo new posts/如何用hugo搭建个人博客.md(文字部分为我的博客标题名) 右边资源管理器content目录中会出现：如何用hugo搭建个人博客.md文件，更改标题，在下面写下你的内容，把draft状态改为false hugo server 右侧资源管理器更改config.toml文件：语言改为zh-Hans，baseURL改为https://wbnm-lirongyue.github.io hugo(重开一个控制台)，此时资源管理器会增加一个public文件夹 cd public 新建.gitignore文件夹，将/public/放进去 git init git add . gc    github远程仓库设置
+ 新建仓库，仓库名必须为：wbnm-lirongyue.github.io git remote add origin git@github.com.wbnm-lirongyue.github.io.git git push -u origin master    运行网址"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://wbnm-lirongyue.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      李荣跃的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">如何用hugo搭建个人博客</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-01-15T20:44:38&#43;08:00">January 15, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="今天用hugo搭建了自己的博客给大家分享一下过程">今天用hugo搭建了自己的博客，给大家分享一下过程。</h1>
+<p>主要有以下4个部分
+<img src="https://i.loli.net/2020/01/15/fWC7ouYVB1IDsya.png" alt="2.png"></p>
+<ol>
+<li>
+<p>hugo安装</p>
+<p>下载hugo_xxx-Windows-64bit.zip,下载网址为：<a href="https://github.com/gohugoio/hugo/releases">hugo下载地址</a>; 我把hugo.exe解压到了D:\Software\hugo\hugo.exe,并把D:\Software\hugo加到了环境变量PATH里,打开VScode,终端运行hugo version查看版本,有版本号则安装成功;</p>
+</li>
+<li>
+<p>vscode终端运行命令行</p>
+<ul>
+<li>cd /d/jirengu</li>
+<li>hugo new site wbnm-lirongyue.github.io-creator  (wbnm-lirongyue为我的github用户名)</li>
+<li>cd wbnm-lirongyue.github.io-creator</li>
+<li>git init</li>
+<li>git submodule add <a href="https://github.com/budparr/gohugo-theme-ananke.git">https://github.com/budparr/gohugo-theme-ananke.git</a> themes/ananke  (设置主题，我用的默认主题ananke)</li>
+<li>echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml</li>
+<li>hugo new posts/如何用hugo搭建个人博客.md(文字部分为我的博客标题名)</li>
+<li>右边资源管理器content目录中会出现：如何用hugo搭建个人博客.md文件，更改标题，在下面写下你的内容，把draft状态改为false</li>
+<li>hugo server</li>
+<li>右侧资源管理器更改config.toml文件：语言改为zh-Hans，baseURL改为https://wbnm-lirongyue.github.io</li>
+<li>hugo(重开一个控制台)，此时资源管理器会增加一个public文件夹</li>
+<li>cd public</li>
+<li>新建.gitignore文件夹，将/public/放进去</li>
+<li>git init</li>
+<li>git add .</li>
+<li>gc</li>
+</ul>
+</li>
+<li>
+<p>github远程仓库设置</p>
+<ul>
+<li>新建仓库，仓库名必须为：wbnm-lirongyue.github.io</li>
+<li>git remote add origin <a href="mailto:git@github.com.wbnm-lirongyue.github.io.git">git@github.com.wbnm-lirongyue.github.io.git</a></li>
+<li>git push -u origin master</li>
+</ul>
+</li>
+<li>
+<p>运行网址</p>
+<ul>
+<li>浏览器中运行&quot;wbnm-lirongyue.github.io&rdquo;,我的博客就开通啦！</li>
+</ul>
+</li>
+</ol>
+<p>好开心，再接再厉！
+<img src="https://i.loli.net/2020/01/15/zkGOpBNFyLm7gnY.png" alt="1.png"></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://wbnm-lirongyue.github.io/" >
+    &copy;  李荣跃的博客 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
